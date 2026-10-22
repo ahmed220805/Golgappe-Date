@@ -50,16 +50,51 @@ ul{padding-left:1.2em;margin:.4em 0}
 .shake{animation:sh .5s}
 @keyframes sh{25%{transform:translateX(-6px)}75%{transform:translateX(6px)}}
 .sr{position:absolute;left:-9999px}
+.dare-card{margin-top:14px;padding:16px;border:2px dashed #F19A86;border-radius:18px;background:linear-gradient(135deg,#FFF0F4,#FFF1D9)}
+.dare-card h3{margin:.35em 0;color:#B82D5A;font-size:1.25rem;line-height:1.25}
+.dare-card p{margin:.45em 0}
+.dare-category{display:inline-block;border-radius:999px;background:#FFE0E8;color:#A72D53;padding:4px 10px;font-size:.85rem;font-weight:800}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
-.hero{width:100%;border-radius:22px;border:3px solid #FF7AA2;display:block;margin:10px 0}
-.scene{width:100%;max-width:420px;display:block;margin:8px auto;border-radius:20px;border:3px solid #FF7AA2}
+.hero{width:100%;height:auto;object-fit:cover;border-radius:22px;border:3px solid #FF7AA2;display:block;margin:10px 0}
+.scene{width:100%;height:auto;object-fit:cover;max-width:420px;display:block;margin:8px auto;border-radius:20px;border:3px solid #FF7AA2}
 .fl{background:none!important;padding:0!important;border:4px solid transparent;overflow:hidden;box-shadow:none;border-radius:18px}
 .fl img{width:100%;display:block;border-radius:14px}
 .fl[aria-pressed="true"]{border-color:#FFD35C;outline:none;transform:scale(1.05)}
-body{background:radial-gradient(circle at 20% 0,#4A1D5C 0,#1D1030 60%);color:#FFEFD9}
-:root{--bg:#1D1030;--card:#2E1A45;--ink:#FFEFD9;--muted:#D9BFE6;--line:#7A3F8F;--rose:#FF5C8D;--saffron:#FFC14D;--mint:#5ED3A8}
-h1,h2{color:#FFC14D}.lights{background-color:#1D1030}button.alt{background:#2E1A45;color:#FFEFD9;border-color:#FF7AA2}
-button{border-color:#FFEFD9;box-shadow:0 4px 0 #8A1F4D}
+/* GolGappe Date: consistent desi pink, saffron and cream theme */
+:root{--bg:#FFF0E6;--card:#FFF9F2;--ink:#54251F;--muted:#89584C;--line:#F4C8B8;--rose:#E83E72;--saffron:#FF9D36;--mint:#258B62;--mintc:#39A977;--imlic:#A94E27;--hingc:#D99B16;--pomc:#D72F59}
+body{background:radial-gradient(circle at 15% 0,#FFE1D6 0,#FFF0E6 48%,#FFE8C8 100%);color:var(--ink)}
+.lights{background:radial-gradient(circle at 12px 8px,#FFB347 5px,transparent 6px) 0 0/48px 26px repeat-x,radial-gradient(circle at 36px 14px,#FF7AA2 5px,transparent 6px) 0 0/48px 26px repeat-x;border-bottom:2px solid var(--line)}
+h1,h2{color:var(--rose)}
+.card{box-shadow:0 6px 0 #F4C8B8}
+button{border-color:#8E3D36;box-shadow:0 4px 0 #8E3D36;background:linear-gradient(135deg,#F13F75,#FF6B70)}
+button.alt{background:#FFF9F2;color:var(--ink);border-color:#E9A68D}
+.fl{border:4px solid #FFF9F2!important;box-shadow:0 4px 12px #7D34251A!important;background:none!important}
+.fl img{width:100%;aspect-ratio:1/1;object-fit:cover;display:block;border-radius:14px}
+.fl[aria-pressed="true"]{border-color:#FFB83E!important;transform:translateY(-2px) scale(1.025);box-shadow:0 0 0 3px #FFB83E55,0 6px 14px #7D342522!important}
+.hero,.scene{border-color:#FF9D8F;box-shadow:0 8px 24px #A9472A18}
+.chip.hing{background:#A87F00}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#FFF0E6;--card:#FFF9F2;--ink:#54251F;--muted:#89584C;--line:#F4C8B8;--rose:#E83E72;--saffron:#FF9D36;--mint:#258B62}}
+:root[data-theme="dark"]{--bg:#FFF0E6;--card:#FFF9F2;--ink:#54251F;--muted:#89584C;--line:#F4C8B8;--rose:#E83E72;--saffron:#FF9D36;--mint:#258B62}
+
+/* Visual polish pass: playful desi date-night look, safe for Capacitor WebView */
+:root{--bg:#fff1e4;--card:#fffaf4;--ink:#56251f;--muted:#8c5b50;--line:#f4cbb7;--rose:#f04478;--saffron:#ff9c38;--mint:#27956b;color-scheme:light}
+html,body{background:radial-gradient(ellipse at 8% 0%,#ffe0e9 0,transparent 38%),radial-gradient(ellipse at 100% 14%,#ffe1bd 0,transparent 34%),var(--bg);color:var(--ink)}
+body{background-attachment:fixed}
+button,.button{transition:transform .16s ease,filter .16s ease,box-shadow .16s ease;-webkit-tap-highlight-color:transparent}
+button:active,.button:active{transform:translateY(2px) scale(.985);filter:saturate(1.08)}
+.card{border:1px solid #f5d7c6;border-radius:24px;background:linear-gradient(160deg,#fffdf9,#fff4e9);box-shadow:0 9px 0 #f4d2bf,0 15px 28px #9e4b2710}
+.hero,.scene{border:3px solid #fff8f1;border-radius:24px;box-shadow:0 8px 0 #f4c9b5,0 16px 30px #a9472a20}
+.fl{border-radius:20px!important;overflow:hidden;transition:transform .18s ease,box-shadow .18s ease}
+.fl img{transition:transform .25s ease; background:#fff4df}
+.fl:active img{transform:scale(.97)}
+input,textarea{border-radius:16px!important;border:1.5px solid #efb99e!important;background:#fffaf5!important;color:#56251f!important}
+.chip{border-radius:999px;letter-spacing:.01em}
+@keyframes desiPop{0%{transform:scale(.94);opacity:.4}70%{transform:scale(1.015)}100%{transform:scale(1);opacity:1}}
+@keyframes softFloat{0%,100%{translate:0 0}50%{translate:0 -4px}}
+.hero{animation:desiPop .42s ease-out both}
+.fl[aria-pressed="true"]{animation:desiPop .22s ease-out both}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}}
+
 </style>
 </head>
 <body>
@@ -78,13 +113,63 @@ const FLAVOURS=[
 const IDS=FLAVOURS.map(f=>f.id);
 const TOTAL=10;
 const TASKS=[
- {at:1,title:"Cute digital love letter",desc:"Write her a short, sweet love letter."},
- {at:2,title:"Virtual keyring",desc:"Draw or pick a virtual keyring for her."},
- {at:3,title:"Virtual dessert",desc:"Serve her an imaginary dessert, with a flourish."},
- {at:4,title:"Phone wallpaper",desc:"Make a cute wallpaper for her phone."},
- {at:5,title:"Romantic dare",desc:"Name five things you love about her."}];
+ {id:"r1",category:"Romantic",title:"Tiny love speech",desc:"Tell your partner three tiny things you adore about them."},
+ {id:"r2",category:"Romantic",title:"Twenty-second hug",desc:"Share a warm hug for 20 seconds, if you both want to."},
+ {id:"r3",category:"Romantic",title:"Memory lane",desc:"Describe a favourite memory you made together."},
+ {id:"r4",category:"Romantic",title:"Sweet compliment",desc:"Give a sincere compliment you have not used today."},
+ {id:"r5",category:"Romantic",title:"Future date",desc:"Plan your dream low-budget date in three details."},
+ {id:"r6",category:"Romantic",title:"Love song line",desc:"Sing or say one line from a song that reminds you of them."},
+ {id:"r7",category:"Romantic",title:"Nickname reveal",desc:"Invent a sweet nickname and explain the story behind it."},
+ {id:"r8",category:"Romantic",title:"Gratitude moment",desc:"Thank your partner for one small thing they do."},
+ {id:"r9",category:"Romantic",title:"First impression",desc:"Share your honest first impression of each other."},
+ {id:"r10",category:"Romantic",title:"Movie moment",desc:"Recreate a cute movie-romance pose together."},
+ {id:"r11",category:"Romantic",title:"Three wishes",desc:"Name three little experiences you want to share together."},
+ {id:"r12",category:"Romantic",title:"Handwritten heart",desc:"Draw a tiny heart and write one word that describes your bond."},
+ {id:"f1",category:"Funny",title:"Bollywood dialogue",desc:"Deliver a dramatic Bollywood-style line about golgappe."},
+ {id:"f2",category:"Funny",title:"Pani puri news anchor",desc:"Give a 10-second breaking-news report about your date."},
+ {id:"f3",category:"Funny",title:"Silly walk",desc:"Do your funniest walk across the room for five seconds."},
+ {id:"f4",category:"Funny",title:"Impression time",desc:"Imitate your partner kindly for 10 seconds."},
+ {id:"f5",category:"Funny",title:"Food critic",desc:"Review an imaginary golgappa like a very serious food critic."},
+ {id:"f6",category:"Funny",title:"Tongue twister",desc:"Say “golgappa gol gol, pyaar ka paani full” three times quickly."},
+ {id:"f7",category:"Funny",title:"Freeze pose",desc:"Both strike the silliest couple photo pose you can think of."},
+ {id:"f8",category:"Funny",title:"Animal voice",desc:"Say one sweet sentence in a cartoon animal voice."},
+ {id:"f9",category:"Funny",title:"Tiny dance",desc:"Do a five-second dance with absolutely no choreography."},
+ {id:"f10",category:"Funny",title:"Fake award",desc:"Give your partner a made-up award and an acceptance speech."},
+ {id:"f11",category:"Funny",title:"Golgappa jingle",desc:"Make up a two-line jingle about your favourite snack."},
+ {id:"f12",category:"Funny",title:"Emoji acting",desc:"Act out three emojis while your partner guesses them."},
+ {id:"fl1",category:"Flirty",title:"Cheesy pickup line",desc:"Deliver your cheesiest clean pickup line with confidence."},
+ {id:"fl2",category:"Flirty",title:"Eye contact",desc:"Share a smile and eye contact for five seconds, if comfortable."},
+ {id:"fl3",category:"Flirty",title:"Date-night outfit",desc:"Describe the outfit you think looks extra cute on your partner."},
+ {id:"fl4",category:"Flirty",title:"Charm attack",desc:"Try to make your partner blush with a sweet compliment."},
+ {id:"fl5",category:"Flirty",title:"Rom-com title",desc:"Give your love story a dramatic romantic-comedy title."},
+ {id:"fl6",category:"Flirty",title:"Secret admirer",desc:"Describe your partner like an anonymous admirer writing a note."},
+ {id:"fl7",category:"Flirty",title:"Smile challenge",desc:"Try to make each other smile without touching for 10 seconds."},
+ {id:"fl8",category:"Flirty",title:"Dream date pitch",desc:"Pitch your dream date together in a 15-second sales pitch."},
+ {id:"fl9",category:"Flirty",title:"Cute voice note",desc:"Record or pretend to record a five-second sweet voice note."},
+ {id:"fl10",category:"Flirty",title:"Best feature",desc:"Name one non-appearance quality you find attractive about them."},
+ {id:"fl11",category:"Flirty",title:"Love-language guess",desc:"Guess one small thing that makes your partner feel loved."},
+ {id:"fl12",category:"Flirty",title:"Romantic tagline",desc:"Create a one-line tagline for your partner's dating profile."},
+ {id:"c1",category:"Couple Challenge",title:"Two truths",desc:"Each share one true thing the other may not know yet."},
+ {id:"c2",category:"Couple Challenge",title:"Same answer",desc:"Count to three and both say your ideal snack date."},
+ {id:"c3",category:"Couple Challenge",title:"Memory quiz",desc:"Ask each other one question about a shared memory."},
+ {id:"c4",category:"Couple Challenge",title:"Team nickname",desc:"Invent a team name for your couple and say it together."},
+ {id:"c5",category:"Couple Challenge",title:"Future bucket list",desc:"Add one fun, realistic idea to your shared bucket list."},
+ {id:"c6",category:"Couple Challenge",title:"Guess the favourite",desc:"Guess your partner's favourite comfort food, then reveal it."},
+ {id:"c7",category:"Couple Challenge",title:"Draw each other",desc:"Draw a quick silly portrait of each other on paper or in the air."},
+ {id:"c8",category:"Couple Challenge",title:"Kindness promise",desc:"Choose one small, thoughtful thing to do for each other this week."},
+ {id:"c9",category:"Couple Challenge",title:"No-phone minute",desc:"Spend one minute chatting with phones face down."},
+ {id:"c10",category:"Couple Challenge",title:"Couple handshake",desc:"Invent a tiny handshake or fist-bump routine together."},
+ {id:"c11",category:"Couple Challenge",title:"Playlist swap",desc:"Pick a song the other person should add to their playlist."},
+ {id:"c12",category:"Couple Challenge",title:"Choose together",desc:"Agree on one snack, show, or activity for your next mini-date."}
+];
+function pickDare(session){
+ const used=new Set(session.usedDareIds||[]);
+ const available=TASKS.filter(t=>!used.has(t.id));
+ const pool=available.length?available:TASKS;
+ return pool[Math.floor(Math.random()*pool.length)];
+}
 const validFlavour=id=>IDS.includes(id);
-function newSession(){return{rounds:[],score:0}}
+function newSession(){return{rounds:[],score:0,usedDareIds:[]}}
 function submitRound(s,selected,guessed){
  if(!validFlavour(selected)||!validFlavour(guessed))throw new Error("Invalid flavour");
  if(s.rounds.length>=TOTAL)throw new Error("Game already complete");
@@ -92,7 +177,6 @@ function submitRound(s,selected,guessed){
  return{rounds:[...s.rounds,{n:s.rounds.length+1,selected,guessed,correct:ok}],score:s.score+(ok?1:0)};
 }
 const wrongCount=s=>s.rounds.filter(r=>!r.correct).length;
-const tasksFor=w=>TASKS.filter(t=>t.at<=w);
 const isDone=s=>s.rounds.length===TOTAL;
 function verdict(sc){
  if(sc===10)return"GolGappe Soulmates! 🥰";
@@ -165,9 +249,9 @@ const views={
    $("h1",{class:"sr"},"GolGappe Date"),
    $("div",{class:"card"},$("label",{for:"b"},"His name (optional)"),boy,$("label",{for:"g"},"Her name (optional)"),girl,
     $("p",{class:"muted"},"Names stay on this device and are never saved.")),
-   $("div",{class:"card"},$("strong",null,"Cute tasks for wrong guesses"),
-    $("ul",null,TASKS.map(t=>$("li",null,t.at+(t.at===5?"+ wrong":" wrong")+": "+t.title))),
-    $("p",{class:"muted"},"Tasks are playful suggestions. Skip any you don't fancy. Nothing is bought or sent.")),
+   $("div",{class:"card"},$("strong",null,"48 random dares for wrong guesses 💕"),
+    $("p",null,"Romantic, funny, flirty and couple challenges—picked randomly as you play."),
+    $("p",{class:"muted"},"Dares are stored in the app and work offline. They won't repeat in one game until the library is used. Skip anything you don't fancy.")),
    $("div",{class:"row"},
     $("button",{class:"big",onclick(){Sound.click();st.boy=cleanName(boy.value,"Him");st.girl=cleanName(girl.value,"Her");st.session=newSession();st.secret=null;go("pick")}},"Start Game"),
     $("button",{class:"alt big",onclick(){Sound.click();go("how")}},"How to Play")))},
@@ -192,7 +276,7 @@ const views={
     if(!sel||ok.disabled)return;ok.disabled=true;           /* block double submits */
     try{const before=st.session;st.session=submitRound(st.session,st.secret,sel);
      st.last=st.session.rounds[st.session.rounds.length-1];st.secret=null;st.guess=null;
-     const r=st.last;if(r.correct){Sound.good();hearts("❤️")}else Sound.bad();void before;
+     const r=st.last;if(r.correct){Sound.good();hearts("❤️")}else{r.dare=pickDare(st.session);st.session.usedDareIds.push(r.dare.id);Sound.bad()}void before;
      go("result")}catch(e){msg.textContent="Something went wrong. Please try again.";ok.disabled=false}}},"Confirm guess");
   const s=$("section",null,hud(),$("h2",null,"Which paani did she choose?"),$("img",{class:"scene",src:IMG.scene,alt:"The boy serves golgappe to his girlfriend"}));
   const g=flavourGrid(null,id=>{sel=id;ok.disabled=false;[...g.children].forEach((b,i)=>b.setAttribute("aria-pressed",String(FLAVOURS[i].id===id)));msg.textContent=fl(id).name+" selected."});
@@ -202,21 +286,21 @@ const views={
   const cont=$("button",{class:"big",disabled:true,onclick(){Sound.next();if(done){Sound.win();hearts("🥳");go("final")}else go("pick")}},done?"See final results":"Continue");
   later(()=>{cont.disabled=false},1300);
   announce((good?"Perfect match! ":"Wrong paani. ")+"She picked "+fl(r.selected).name+", he guessed "+fl(r.guessed).name+". Score "+st.session.score+".");
-  const w=wrongCount(st.session),newTask=!good&&w<=TASKS.length?TASKS[w-1]:null;
+  const dare=!good?r.dare:null;
   return $("section",{class:good?"":"shake"},hud(),
    $("h2",null,good?"Perfect Match! ❤️":"Oops! Wrong Paani! 😜"),
    $("img",{class:"scene",src:good?IMG.match:IMG.wrong,alt:good?"She is delighted: match!":"She looks playfully disappointed"}),$("div",{class:"card"},$("p",null,"She picked ",chip(r.selected)),$("p",null,"He guessed ",chip(r.guessed)),
     $("p",null,good?st.boy+" really knows "+st.girl+"'s taste! +1 point 🎉":"No point this time. "+st.girl+" keeps her secrets well! 🌸"),
-    newTask?$("p",null,"New task unlocked: ",$("strong",null,newTask.title)):null),cont)},
+    dare?$("div",{class:"dare-card"},$("span",{class:"dare-category"},dare.category),$("h3",null,"Your random dare: "+dare.title),$("p",null,dare.desc),$("p",{class:"muted"},"Both players can skip or swap any dare.")):null),cont)},
  final(){
-  const s=st.session,w=wrongCount(s),tasks=tasksFor(w),pct=Math.round(s.score/TOTAL*100);
+  const s=st.session,w=wrongCount(s),tasks=s.rounds.filter(r=>!r.correct&&r.dare).map(r=>r.dare),pct=Math.round(s.score/TOTAL*100);
   st.share="We scored "+s.score+"/10 in GolGappe Date! ❤️ Can you guess her favourite paani? Play here: "+location.href.split("#")[0];
   const status=$("p",{class:"msg","aria-live":"polite"});
   return $("section",null,$("h2",null,verdict(s.score)),$("img",{class:"scene",src:IMG.end,alt:"The couple hugging"}),
    $("div",{class:"card"},$("p",null,$("span",{class:"score"},s.score+" / 10")," · "+pct+"% accuracy"),$("p",null,s.score+" correct, "+w+" wrong")),
    $("div",{class:"card"},$("strong",null,"Your cute tasks"),
-    tasks.length?$("ul",null,tasks.map(t=>$("li",null,$("strong",null,t.title+": "),t.desc))):$("p",null,"No tasks! A perfect round of paani. 🥰"),
-    $("p",{class:"muted"},"Suggestions only. Nothing is purchased or delivered.")),
+    tasks.length?$("ul",null,tasks.map(t=>$("li",null,$("strong",null,"["+t.category+"] "+t.title+": "),t.desc))):$("p",null,"No wrong guesses and no dares needed! Perfect paani instincts. 🥰"),
+    $("p",{class:"muted"},"Dares are suggestions. Skip or swap anything you don't fancy.")),
    $("div",{class:"card",style:"overflow-x:auto"},$("table",null,$("thead",null,$("tr",null,["#","She picked","He guessed","Result"].map(h=>$("th",null,h)))),
     $("tbody",null,s.rounds.map(r=>$("tr",null,$("td",null,r.n),$("td",null,fl(r.selected).name),$("td",null,fl(r.guessed).name),$("td",null,r.correct?"✅ Match":"❌ Miss")))))),
    status,
